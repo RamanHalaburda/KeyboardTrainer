@@ -16,6 +16,6 @@ public:		// User declarations
         __fastcall TForm4(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm5 *Form4;
+extern PACKAGE TForm4 *Form4;
 //---------------------------------------------------------------------------
 #endif

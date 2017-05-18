@@ -7,10 +7,12 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <ExtCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
+        TTimer *Timer1;
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm2(TComponent* Owner);
