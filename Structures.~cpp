@@ -10,7 +10,7 @@ struct User
         int totalCharactersPassed; // set 0;
         int timerSeconds;
         bool timerIsActive;
-        int mode; // set 0 // 0 - training, 1 - practice
+        int mode; // set 0           // 0 - training, 1 - practice
 }
 
  

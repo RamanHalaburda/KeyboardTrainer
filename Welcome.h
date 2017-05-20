@@ -23,18 +23,23 @@ __published:	// IDE-managed Components
         TMenuItem *N8;
         TLabel *Label1;
         TLabel *Label2;
+        TLabel *Label3;
+        TEdit *Edit1;
+        TButton *Button1;
         void __fastcall N7Click(TObject *Sender);
         void __fastcall N6Click(TObject *Sender);
         void __fastcall N2Click(TObject *Sender);
         void __fastcall N4Click(TObject *Sender);
         void __fastcall N5Click(TObject *Sender);
         void __fastcall N8Click(TObject *Sender);
+        void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
+extern String name;
 //---------------------------------------------------------------------------
 #endif
  

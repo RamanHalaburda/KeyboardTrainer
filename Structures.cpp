@@ -11,6 +11,4 @@ struct User
         int timerSeconds;
         bool timerIsActive;
         int mode; // set 0           // 0 - training, 1 - practice
-}
-
- 
+};

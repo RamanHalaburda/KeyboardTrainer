@@ -1,10 +1,18 @@
 #include <vcl.h>
 #pragma hdrstop
 #include "Options.h"
+#include "Welcome.h"
+#include "Trainer.h"
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm3 *Form3;
-__fastcall TForm3::TForm3(TComponent* Owner) : TForm(Owner) { }
+__fastcall TForm3::TForm3(TComponent* Owner) : TForm(Owner)
+{
+        Form3->ModalResult = mrNone;
+}
+//---------------------------------------------------------------------------
+int selectedIndex;
+int timer;
 //---------------------------------------------------------------------------
 void __fastcall TForm3::FormCreate(TObject *Sender)
 {
@@ -16,8 +24,19 @@ void __fastcall TForm3::FormCreate(TObject *Sender)
 // применить изменения настроек
 void __fastcall TForm3::Button1Click(TObject *Sender)
 {
-        int selectedIndex = ComboBox1->ItemIndex;
-        int time = Edit1->Text.ToInt(); 
+        if (Form3->Edit1 != "")
+        {
+            selectedIndex = ComboBox1->ItemIndex;
+            timer = Edit1->Text.ToInt();
+            Form3->ModalResult = mrOk;
+            Form1->Show();
+        }
+        else
+        {
+                ShowMessage("Ошибка ввода времени!");
+        }
+
+
 }
 //---------------------------------------------------------------------------
 
