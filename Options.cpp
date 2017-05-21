@@ -8,7 +8,8 @@
 TForm3 *Form3;
 __fastcall TForm3::TForm3(TComponent* Owner) : TForm(Owner)
 {
-        Form3->ModalResult = mrNone;
+        //Form3->ModalResult = mrNone;
+        Form3->ModalResult = mrOk;
 }
 //---------------------------------------------------------------------------
 int selectedIndex;
@@ -30,6 +31,7 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
             timer = Edit1->Text.ToInt();
             Form3->ModalResult = mrOk;
             Form1->Show();
+            Form3->Close();
         }
         else
         {
