@@ -198,6 +198,7 @@ object Form1: TForm1
       Height = 25
       Caption = #1047#1072#1074#1077#1088#1096#1080#1090#1100
       TabOrder = 2
+      OnClick = Button2Click
     end
   end
   object MainMenu1: TMainMenu

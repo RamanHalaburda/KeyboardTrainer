@@ -13,7 +13,6 @@ class TForm6 : public TForm
 {
 __published:	// IDE-managed Components
         TStringGrid *StringGrid1;
-        void __fastcall FormCreate(TObject *Sender);
         void __fastcall FormShow(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
