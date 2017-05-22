@@ -137,14 +137,13 @@ void __fastcall TForm1::Timer1Timer(TObject *Sender)
                 Label3->Caption = "Âğåìÿ çàêîí÷èëîñü";
                 Label2->Visible = false;
                 Timer1->Enabled = false;
-
-                ShowMessage("Çàäàíèå îêîí÷åíî.\nÂğåìåíè çàòğà÷åíî: " + IntToStr(ptime) + ".\nÎøèáîê äîïóùåíî: " + IntToStr(pcountMistakes));
-                 
+                        
                 strcpy(pname, Edit1->Text.c_str());
                 ptime = atoi(Edit2->Text.c_str()) - atoi(Label2->Caption.c_str());
                 // person.fileName - óæå çàïèñàíî
                 strcpy(plevel, ComboBox1->Text.c_str());
                 pcountMistakes = atoi(Label1->Caption.c_str()) + RichEdit1->Text.Length() - RichEdit2->Text.Length();
+                ShowMessage("Çàäàíèå îêîí÷åíî.\nÂğåìåíè çàòğà÷åíî: " + IntToStr(ptime) + ".\nÎøèáîê äîïóùåíî: " + IntToStr(pcountMistakes));
                 writeResult(pname, ptime,  pfileName, plevel, pcountMistakes);
         }
 }
@@ -185,7 +184,8 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
         // person.fileName - óæå çàïèñàíî
         strcpy(plevel, ComboBox1->Text.c_str());
         pcountMistakes = atoi(Label1->Caption.c_str()) + RichEdit1->Text.Length() - RichEdit2->Text.Length();
-        writeResult(pname, ptime,  pfileName, plevel, pcountMistakes);        
+        writeResult(pname, ptime,  pfileName, plevel, pcountMistakes);
+        Application->Terminate();
 }
 //---------------------------------------------------------------------------
 
